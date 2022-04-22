@@ -1,0 +1,11 @@
+<ion-header *ngIf="structure.header.length > 0">
+  <ion-toolbar>
+    <ng-container *ngFor="let item of structure.header">
+      <app-dynamic [component]="componentsService[item.component]" [data]="item.data"></app-dynamic>
+    </ng-container>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>

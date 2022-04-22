@@ -1,0 +1,7 @@
+{
+  "name": "spp_app_ionic6",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

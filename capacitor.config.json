@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "spp_app_ionic6",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

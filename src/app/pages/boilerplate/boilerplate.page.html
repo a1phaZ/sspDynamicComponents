@@ -6,6 +6,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content *ngIf="structure.content.length > 0">
+  <ng-container *ngFor="let item of structure.content">
+    <app-dynamic [component]="componentsService[item.component]" [data]="item.data"></app-dynamic>
+  </ng-container>
 </ion-content>
+
+<ion-footer *ngIf="structure.footer.length > 0">
+  <ng-container *ngFor="let item of structure.footer">
+    <app-dynamic [component]="componentsService[item.component]" [data]="item.data"></app-dynamic>
+  </ng-container>
+</ion-footer>

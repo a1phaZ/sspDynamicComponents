@@ -68,6 +68,40 @@ export class TabsService {
           }
         }
       ]
+    },
+    auth: {
+      slot: 'bottom',
+      structure: {
+        header: [],
+        content: [],
+        footer: []
+      },
+      tabList: [
+        {
+          tab: 'phone',
+          label: 'Телефон',
+          iconName: 'call-outline',
+          badgeCount: null,
+          structure: {
+            header: [],
+            content: [{
+              component: 'inputFieldComponent', data: {}
+            }],
+            footer: [],
+          }
+        },
+        {
+          tab: 'password',
+          label: 'Логин / Пароль',
+          iconName: 'barcode-outline',
+          badgeCount: null,
+          structure: {
+            header: [],
+            content: [],
+            footer: [],
+          }
+        }
+      ]
     }
   };
 
@@ -95,7 +129,7 @@ export interface ITabsState {
 }
 
 export interface ITabs {
-  slot: string;
+  slot: 'top' | 'bottom';
   tabList: ITab[];
   structure: IStructure;
 }
@@ -115,6 +149,6 @@ export interface IStructure {
 }
 
 export type TStructure = {
-  component: any;
+  component: 'headerComponent' | 'inputFieldComponent';
   data: any;
 };
